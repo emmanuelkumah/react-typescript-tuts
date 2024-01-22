@@ -3,6 +3,7 @@ import Users from "./components/TypingProps/Users";
 import Greetings from "./components/TypingProps/Greetings";
 import Parent from "./components/ComponentProps/Parent";
 import Child from "./components/ComponentProps/Child";
+import UserInput from "./components/TypingEvents/UserInput";
 
 function App() {
   //array of objects
@@ -20,6 +21,8 @@ function App() {
       <Parent>
         <Child />
       </Parent>
+      {/* Typing events */}
+      <UserInput />
     </div>
   );
 }
