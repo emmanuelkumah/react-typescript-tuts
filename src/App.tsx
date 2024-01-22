@@ -1,6 +1,8 @@
 import React from "react";
 import Users from "./components/TypingProps/Users";
 import Greetings from "./components/TypingProps/Greetings";
+import Parent from "./components/ComponentProps/Parent";
+import Child from "./components/ComponentProps/Child";
 
 function App() {
   //array of objects
@@ -14,6 +16,10 @@ function App() {
       <h3>React TypeScript Tutorial</h3>
       <Greetings firstName="Emmanuel" lastName="Kumah" />
       <Users users={userDetails} />
+      {/* Using Component as Props */}
+      <Parent>
+        <Child />
+      </Parent>
     </div>
   );
 }
