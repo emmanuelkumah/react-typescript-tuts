@@ -4,6 +4,7 @@ import Greetings from "./components/TypingProps/Greetings";
 import Parent from "./components/ComponentProps/Parent";
 import Child from "./components/ComponentProps/Child";
 import UserInput from "./components/TypingEvents/UserInput";
+import UserName from "./components/Hooks/UserName";
 
 function App() {
   //array of objects
@@ -23,6 +24,8 @@ function App() {
       </Parent>
       {/* Typing events */}
       <UserInput />
+      {/* Typing useState */}
+      <UserName />
     </div>
   );
 }
