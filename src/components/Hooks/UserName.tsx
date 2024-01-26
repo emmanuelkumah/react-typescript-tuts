@@ -1,8 +1,21 @@
 import React, { useState } from "react";
 
 const UserName = () => {
-  const [users, setUsers] = useState<{ id: number; userName: string }[]>([]);
+  //define the type
+  type Users = {
+    id: number;
+    userName: string;
+  };
+  //initialize the state with the type Users
+  const [users, setUsers] = useState<Users[]>([]);
+  // Initialize the state with the string type or null
   const [message, setMessage] = useState<string | null>(null);
+  // Initialize the state with the string type
+  const [greetings, setGreetings] = useState<string>("Hello World");
+
+  const handleChangeGreetings = () => {
+    setGreetings("Hey! You");
+  };
 
   const handleClick = () => {
     setUsers([
@@ -18,6 +31,10 @@ const UserName = () => {
 
   return (
     <div>
+      <section>
+        <h2>Greetings: {greetings}</h2>
+        <button onClick={handleChangeGreetings}>Change Greeting</button>
+      </section>
       <h3>Display Users</h3>
       {message && message}
       {users.map((user) => (
