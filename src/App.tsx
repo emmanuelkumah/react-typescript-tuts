@@ -1,6 +1,10 @@
 import React from "react";
 import Users from "./components/TypingProps/Users";
-import Greetings from "./components/TypingProps/Greetings";
+import { Greetings } from "./components/TypingProps/Greetings";
+import { Greetings3 } from "./components/TypingProps/Greetings";
+import { MyComponent } from "./components/TypingProps/MyComponent";
+import { MyComponent2 } from "./components/TypingProps/MyComponent";
+import { MyComponent3 } from "./components/TypingProps/MyComponent";
 
 function App() {
   //array of objects
@@ -12,8 +16,13 @@ function App() {
   return (
     <div>
       <h3>React TypeScript Tutorial</h3>
+      {/* Typing component props with React.FC */}
+      <MyComponent hasLoggedIn={true} />
+      <MyComponent2 hasLoggedIn={true} />
+      <MyComponent3 firstName="Emmanuel" age={3} />
       <Greetings firstName="Emmanuel" lastName="Kumah" />
-      <Users users={userDetails} />
+      <Greetings3 firstName="Ismael" lastName="Thomas" />
+      <Users data={userDetails} />
     </div>
   );
 }
