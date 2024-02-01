@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 
 const UserName = () => {
-  //define the type
+  //define the type alias
   type Users = {
     id: number;
     userName: string;
   };
-  //initialize the state with the type Users
+  //initialize the state with the type alias
   const [users, setUsers] = useState<Users[]>([]);
+
   // Initialize the state with the string type or null
   const [message, setMessage] = useState<string | null>(null);
+
   // Initialize the state with the string type
   const [greetings, setGreetings] = useState<string>("Hello World");
 

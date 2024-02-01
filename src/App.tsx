@@ -5,6 +5,10 @@ import Parent from "./components/ComponentProps/Parent";
 import Child from "./components/ComponentProps/Child";
 import UserInput from "./components/TypingEvents/UserInput";
 import UserName from "./components/Hooks/UserName";
+import {
+  Example1,
+  Example2,
+} from "./components/Hooks/useState/UseStateExamples";
 
 function App() {
   //array of objects
@@ -26,6 +30,9 @@ function App() {
       <UserInput />
       {/* Typing useState */}
       <UserName />
+      {/* typing useState Examples  */}
+      <Example1 />
+      <Example2 />
     </div>
   );
 }
